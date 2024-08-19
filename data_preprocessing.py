@@ -65,10 +65,13 @@ def return_order_information_dataframe(json_data: list) -> pd.DataFrame:
     }
     for mapped_name, original_name in measures_to_extract_dct.items():
         orders_table_df[mapped_name] = list(d[original_name] for d in json_data)
+    # -----------
     # --- abandoned
-    ## # fix the date
+    # localise the date
     # orders_table_df['created_at'] = pd.to_datetime(
-    #     orders_table_df['created_at'], unit='ms')
+    #     orders_table_df['created_at'], unit='ms').tz_localize(
+    #     orders_table_df['timezone'
+    #     )
     # cannot get the localisation according to the timezone to work
 
     return orders_table_df
