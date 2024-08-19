@@ -1,3 +1,4 @@
+# file for loading data from the JSON file and checking all in order
 import json
 from pprint import pprint
 
@@ -22,7 +23,7 @@ def check_consistent_keys(json_data: list) -> None:
 
 if __name__ == "__main__":
     data_dir = r'/Users/philip.papasavvas/Downloads/vmj_int/'
-    json_order_data = load_data(filepath=f"{data_dir}/task_data.json")
-    check_consistent_keys(json_data=json_order_data)
+    json_orders = load_data(filepath=f"{data_dir}/task_data.json")
+    check_consistent_keys(json_data=json_orders)
     print("*** Preview of first item... ***")
-    pprint(json_order_data[0])
+    pprint(json_orders[0])
