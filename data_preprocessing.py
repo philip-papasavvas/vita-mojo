@@ -72,3 +72,13 @@ def return_order_information_dataframe(json_data: list) -> pd.DataFrame:
     # cannot get the localisation according to the timezone to work
 
     return orders_table_df
+
+
+if __name__ == "__main__":
+    from data_loading import load_data
+    data_dir = r'/Users/philip.papasavvas/Downloads/vmj_int/'
+    json_orders = load_data(filepath=f"{data_dir}/task_data.json")
+
+    tenant_store_mapping_df = return_tenant_store_mapping(json_data=json_orders)
+    order_items_df = return_detailed_order_information_dataframe(json_data=json_orders)
+    orders_df = return_order_information_dataframe(json_data=json_orders)
