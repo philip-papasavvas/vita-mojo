@@ -79,7 +79,7 @@ def return_order_information_dataframe(json_data: list) -> pd.DataFrame:
 
 if __name__ == "__main__":
     from data_loading import load_data
-    data_dir = r'/Users/philip.papasavvas/Downloads/vmj_int/'
+    data_dir = r'/path/to/json/directory/'
     json_orders = load_data(filepath=f"{data_dir}/task_data.json")
 
     tenant_store_mapping_df = return_tenant_store_mapping(json_data=json_orders)

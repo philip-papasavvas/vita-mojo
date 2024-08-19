@@ -22,7 +22,7 @@ def check_consistent_keys(json_data: list) -> None:
 
 
 if __name__ == "__main__":
-    data_dir = r'/Users/philip.papasavvas/Downloads/vmj_int/'
+    data_dir = r'/path/to/json/directory/'
     json_orders = load_data(filepath=f"{data_dir}/task_data.json")
     check_consistent_keys(json_data=json_orders)
     print("*** Preview of first item... ***")

@@ -38,7 +38,7 @@ if __name__ == '__main__':
         return_tenant_store_mapping, return_order_information_dataframe,
         return_detailed_order_information_dataframe
     )
-    data_dir = r'/Users/philip.papasavvas/Downloads/vmj_int/'
+    data_dir = r'/path/to/json/directory/'
     json_orders = load_data(filepath=f"{data_dir}/task_data.json")
 
     detailed_orders_df = return_detailed_order_information_dataframe(
